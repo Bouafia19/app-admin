@@ -10,7 +10,7 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :app_admin, AppAdminWeb.Endpoint,
-  url: [host: "example.com", port: 80],
+  url: [host: "https://calm-forest-71599.herokuapp.com/", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
@@ -23,8 +23,9 @@ config :logger, level: :info
 #
 #     config :app_admin, AppAdminWeb.Endpoint,
 #       ...
-#       url: [host: "example.com", port: 443],
-#       https: [
+       https: [port: {:system, "PORT"}],
+       url: [host: "https://calm-forest-71599.herokuapp.com/", port: 443],
+       force_ssl: [rewrite_on: [:x_forwarded_proto]],
 #         port: 443,
 #         cipher_suite: :strong,
 #         keyfile: System.get_env("SOME_APP_SSL_KEY_PATH"),
