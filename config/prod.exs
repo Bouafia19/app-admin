@@ -21,11 +21,11 @@ config :logger, level: :info
 # To get SSL working, you will need to add the `https` key
 # to the previous section and set your `:url` port to 443:
 #
-     config :app_admin, AppAdminWeb.Endpoint,
+#     config :app_admin, AppAdminWeb.Endpoint,
 #       ...
-       https: [port: {:system, "PORT"}],
-       url: [host: "https://calm-forest-71599.herokuapp.com/", port: 443],
-       force_ssl: [rewrite_on: [:x_forwarded_proto]],
+#       https: [port: {:system, "PORT"}],
+#       url: [host: "https://calm-forest-71599.herokuapp.com/", port: 443],
+#       force_ssl: [rewrite_on: [:x_forwarded_proto]],
 #         port: 443,
 #         cipher_suite: :strong,
 #         keyfile: System.get_env("SOME_APP_SSL_KEY_PATH"),
