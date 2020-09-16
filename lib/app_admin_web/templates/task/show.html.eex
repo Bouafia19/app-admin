@@ -1,0 +1,19 @@
+<h1>Show Task</h1>
+
+<ul>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @task.description %>
+  </li>
+
+  <li>
+    <strong>Completed:</strong>
+    <%= @task.completed %>
+  </li>
+
+</ul>
+<hr>
+<span><%= link "Edit", to: Routes.task_path(@conn, :edit, @task), class: "btn btn-primary btn-user btn-block" %></span>
+<br>
+<span><%= link "Back", to: Routes.task_path(@conn, :index), class: "btn btn-warning btn-user btn-block" %></span>

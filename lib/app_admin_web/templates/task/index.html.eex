@@ -1,0 +1,39 @@
+<span><%= link "New Task", to: Routes.task_path(@conn, :new), class: "btn btn-primary" %></span>
+<br>
+<br>
+<!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Listing Tasks</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Completed</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for task <- @tasks do %>
+    <tr>
+      <td><%= task.description %></td>
+      <td><%= task.completed %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.task_path(@conn, :show, task), class: "btn btn-success" %></span>
+        <span><%= link "Edit", to: Routes.task_path(@conn, :edit, task),class: "btn btn-primary" %></span>
+        <span><%= link "Delete", to: Routes.task_path(@conn, :delete, task), method: :delete, data: [confirm: "Are you sure?"] ,class: "btn btn-danger"%></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+</div>
+            </div>
+          </div>
+
+
