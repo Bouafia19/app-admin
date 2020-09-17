@@ -38,7 +38,7 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-<a class="nav-link" href="index.html">
+<a class="nav-link" href="<%= Routes.page_path(@conn, :index) %>">
 <i class="fas fa-fw fa-tachometer-alt"></i>
 <span>Dashboard</span></a>
 </li>
@@ -382,6 +382,11 @@ Logout
 <!-- Page level plugins -->
 <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/vendor/chart.js/Chart.min.js") %>"></script>
 <!-- Page level custom scripts -->
+<script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/demo/chart-area-demo.js") %>"></script>
+<script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/demo/chart-pie-demo.js") %>"></script>
+
+
+
 <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/vendor/datatables/jquery.dataTables.min.js") %>"></script>
 <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/vendor/datatables/dataTables.bootstrap4.min.js") %>"></script>
 <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/demo/datatables-demo.js") %>"></script>

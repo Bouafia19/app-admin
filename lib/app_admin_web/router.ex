@@ -44,7 +44,7 @@ defmodule AppAdminWeb.Router do
   end
 
   scope "/", AppAdminWeb do
-    pipe_through :browser
+    pipe_through [:browser, :protected]
 
     get "/", PageController, :index
   end
